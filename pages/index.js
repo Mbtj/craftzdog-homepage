@@ -17,9 +17,8 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import { IoLogoTwitter, IoLogoLinkedin, IoLogoGithub } from 'react-icons/io5'
+import thumbCards from '../public/images/links/cards.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -99,26 +98,53 @@ const Home = () => (
         </Box>
       </Section>
 
+      
+
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-          Bio
+          Skills
         </Heading>
         <BioSection>
-          <BioYear>1997</BioYear>
-          Born in Toronto.
+          <BioYear>Languages</BioYear>
+          HTML, CSS, Javascript, Java, Dart, Python, C
         </BioSection>
         <BioSection>
-          <BioYear>2015-2019</BioYear>
-          Attended University of Toronto with a Computer Science major (still in progress)
+          <BioYear>Front End Frameworks</BioYear>
+          ReactJS, Vue
         </BioSection>
         <BioSection>
-          <BioYear>2021-2022</BioYear>
-          Completed 
+          <BioYear>Backend and DB</BioYear>
+          Express, PostgreSQL, NodeJS
         </BioSection>
         <BioSection>
+          <BioYear>Tools</BioYear>
+          Git, Github, Visual Studio
+        </BioSection>
+        </Section>
+        {/* <BioSection>
           <BioYear>2012 to present</BioYear>
           Works as a freelance
-        </BioSection>
+        </BioSection> 
+        */}
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          About Me
+        </Heading>
+        <Paragraph>
+        I am a Person with {' '}
+        <Link href="https://twitter.com/hashtag/audhd">#AuDHD</Link>,
+      passionate about creating a world that is more accessible for people with
+      cognitive and mental disabilities. My coding journey started with editing
+      tumblr blogs when I was in high school. I studied computer science at the
+      University of Toronto. After my 3rd year I went on leave to focus on life
+      outside of academics. In that time, I began creating more art, aquired a
+      diploma in web developemnt at{' '}
+      <Link href="https://www.lighthouselabs.ca/">Lighthouse Labs</Link> and started
+      my career as a tech developer. My favourite frameworks right now is React
+      and Express. and I'm having a lot of fun learning new languages such as
+      Vue and TypeScript.
+        </Paragraph>
       </Section>
 
       <Section delay={0.3}>
@@ -128,9 +154,9 @@ const Home = () => (
         <Paragraph>
           Photography📸, Nature🍃,  Fighting Games🕹, {' '}
           <Link href="https://www.instagram.com/soulofeclipse/" target="_blank">
-          Divination🔮,
+          Divination🔮
           </Link>
-          , Art, Poetry
+          , Art🎨, Poetry📝
         </Paragraph>
       </Section>
 
@@ -140,46 +166,35 @@ const Home = () => (
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/mbtj" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
               >
-                @craftzdog
+                @Mbtj
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link href="https://twitter.com/mbtj_dev" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoTwitter />}
               >
-                @inkdrop_app (English)
+                @Mbtj_dev
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
+            <Link href="https://www.linkedin.com/in/TJTaylor-James/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
+                leftIcon={<IoLogoLinkedin />}
               >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @craftzdog
+                /in/TJTaylor-James
               </Button>
             </Link>
           </ListItem>
@@ -187,28 +202,28 @@ const Home = () => (
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
+            href="https://www.instagram.com/soulofeclipse/"
+            title="Eclipse Tarot"
+            thumbnail={thumbCards}
           >
-            My YouTube channel
+            My Tarot Instagram
           </GridItem>
-          <GridItem
+          {/* <GridItem
             href="https://www.inkdrop.app/"
             title="Inkdrop"
             thumbnail={thumbInkdrop}
           >
             A Markdown note-taking app
-          </GridItem>
+          </GridItem> */}
         </SimpleGrid>
 
-        <Box align="center" my={4}>
+        {/* <Box align="center" my={4}>
           <NextLink href="/posts" scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               Popular posts
             </Button>
           </NextLink>
-        </Box>
+        </Box> */}
       </Section>
     </Container>
   </Layout>

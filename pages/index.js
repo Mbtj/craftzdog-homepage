@@ -142,7 +142,7 @@ const Home = () => (
       diploma in web developemnt at{' '}
       <Link href="https://www.lighthouselabs.ca/">Lighthouse Labs</Link> and started
       my career as a tech developer. My favourite frameworks right now is React
-      and Express. and I'm having a lot of fun learning new languages such as
+      and Express. and I&apos;m having a lot of fun learning new languages such as
       Vue and TypeScript.
         </Paragraph>
       </Section>
